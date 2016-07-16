@@ -19,7 +19,7 @@
 
 RNS2SendResult RNS2_Windows_Linux_360::Send_Windows_Linux_360NoVDP( RNS2Socket rns2Socket, RNS2_SendParameters *sendParameters, const char *file, unsigned int line ) {
 
-	int len=0;
+	long len=0;
 	do
 	{
 		(void) file;
@@ -41,7 +41,7 @@ RNS2SendResult RNS2_Windows_Linux_360::Send_Windows_Linux_360NoVDP( RNS2Socket r
 
 		if (sendParameters->systemAddress.address.addr4.sin_family==AF_INET)
 		{
-			len = sendto__( rns2Socket, sendParameters->data, sendParameters->length, 0, ( const sockaddr* ) & sendParameters->systemAddress.address.addr4, sizeof( sockaddr_in ) );
+            len = sendto__( rns2Socket, sendParameters->data, sendParameters->length, 0, ( const sockaddr* ) & sendParameters->systemAddress.address.addr4, sizeof( sockaddr_in ) );
 		}
 		else
 		{
@@ -52,7 +52,7 @@ RNS2SendResult RNS2_Windows_Linux_360::Send_Windows_Linux_360NoVDP( RNS2Socket r
 
 		if (len<0)
 		{
-			RAKNET_DEBUG_PRINTF("sendto failed with code %i for char %i and length %i.\n", len, sendParameters->data[0], sendParameters->length);
+			RAKNET_DEBUG_PRINTF("sendto failed with code %i for char %i and length %i.\n", (int)len, sendParameters->data[0], sendParameters->length);
 		}
 
 
@@ -63,7 +63,7 @@ RNS2SendResult RNS2_Windows_Linux_360::Send_Windows_Linux_360NoVDP( RNS2Socket r
 
 	}
 	while ( len == 0 );
-	return len;
+	return (RNS2SendResult)len;
 }
 
 #endif // Windows, Linux, 360

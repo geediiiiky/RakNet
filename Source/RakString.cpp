@@ -662,7 +662,7 @@ void RakString::StartAfterLastCharacter(char c)
 			++i;
 			if (i < len)
 			{
-				*this = SubStr(i,GetLength()-i);
+				*this = SubStr(i,(int)GetLength()-i);
 			}
 			return;
 		}
@@ -693,7 +693,7 @@ void RakString::StartAfterFirstCharacter(char c)
 			++i;
 			if (i < len)
 			{
-				*this = SubStr(i,GetLength()-i);
+				*this = SubStr(i,(int)GetLength()-i);
 			}
 			return;
 		}
@@ -1469,7 +1469,7 @@ int RakString::ReadIntFromSubstring(const char *str, size_t pos, size_t n)
 		tmp[i]=str[i+pos];
 	return atoi(tmp);
 }
-void RakString::AppendBytes(const char *bytes, unsigned int count)
+void RakString::AppendBytes(const char *bytes, unsigned long count)
 {
 	if (IsEmpty())
 	{

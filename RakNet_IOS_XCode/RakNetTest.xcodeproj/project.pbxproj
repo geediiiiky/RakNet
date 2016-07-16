@@ -106,7 +106,6 @@
 		1025320E16A6775E0000C5BD /* RPC4Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025317B16A6775E0000C5BD /* RPC4Plugin.cpp */; };
 		1025320F16A6775E0000C5BD /* SecureHandshake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025317D16A6775E0000C5BD /* SecureHandshake.cpp */; };
 		1025321016A6775E0000C5BD /* SendToThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025317F16A6775E0000C5BD /* SendToThread.cpp */; };
-		1025321116A6775E0000C5BD /* SHA1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025318116A6775E0000C5BD /* SHA1.cpp */; };
 		1025321216A6775E0000C5BD /* SignaledEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025318316A6775E0000C5BD /* SignaledEvent.cpp */; };
 		1025321316A6775E0000C5BD /* SimpleMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025318516A6775E0000C5BD /* SimpleMutex.cpp */; };
 		1025321416A6775E0000C5BD /* SocketLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1025318B16A6775E0000C5BD /* SocketLayer.cpp */; };
@@ -130,6 +129,8 @@
 		1025322616A6775E0000C5BD /* VariadicSQLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 102531B216A6775E0000C5BD /* VariadicSQLParser.cpp */; };
 		1025322716A6775E0000C5BD /* VitaIncludes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 102531B416A6775E0000C5BD /* VitaIncludes.cpp */; };
 		1025322816A6775E0000C5BD /* WSAStartupSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 102531B716A6775E0000C5BD /* WSAStartupSingleton.cpp */; };
+		4140AADC1D0C100E00E74963 /* DR_SHA1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4140AAD81D0C100E00E74963 /* DR_SHA1.cpp */; };
+		4140AADD1D0C100E00E74963 /* RandSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4140AADA1D0C100E00E74963 /* RandSync.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -356,8 +357,6 @@
 		1025317E16A6775E0000C5BD /* SecureHandshake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureHandshake.h; sourceTree = "<group>"; };
 		1025317F16A6775E0000C5BD /* SendToThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SendToThread.cpp; sourceTree = "<group>"; };
 		1025318016A6775E0000C5BD /* SendToThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendToThread.h; sourceTree = "<group>"; };
-		1025318116A6775E0000C5BD /* SHA1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHA1.cpp; sourceTree = "<group>"; };
-		1025318216A6775E0000C5BD /* SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHA1.h; sourceTree = "<group>"; };
 		1025318316A6775E0000C5BD /* SignaledEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignaledEvent.cpp; sourceTree = "<group>"; };
 		1025318416A6775E0000C5BD /* SignaledEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignaledEvent.h; sourceTree = "<group>"; };
 		1025318516A6775E0000C5BD /* SimpleMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMutex.cpp; sourceTree = "<group>"; };
@@ -413,6 +412,10 @@
 		102531B716A6775E0000C5BD /* WSAStartupSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WSAStartupSingleton.cpp; sourceTree = "<group>"; };
 		102531B816A6775E0000C5BD /* WSAStartupSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSAStartupSingleton.h; sourceTree = "<group>"; };
 		102531B916A6775E0000C5BD /* XBox360Includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBox360Includes.h; sourceTree = "<group>"; };
+		4140AAD81D0C100E00E74963 /* DR_SHA1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DR_SHA1.cpp; sourceTree = "<group>"; };
+		4140AAD91D0C100E00E74963 /* DR_SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DR_SHA1.h; sourceTree = "<group>"; };
+		4140AADA1D0C100E00E74963 /* RandSync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandSync.cpp; sourceTree = "<group>"; };
+		4140AADB1D0C100E00E74963 /* RandSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandSync.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +491,10 @@
 		102530B216A6775E0000C5BD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4140AAD81D0C100E00E74963 /* DR_SHA1.cpp */,
+				4140AAD91D0C100E00E74963 /* DR_SHA1.h */,
+				4140AADA1D0C100E00E74963 /* RandSync.cpp */,
+				4140AADB1D0C100E00E74963 /* RandSync.h */,
 				102530B316A6775E0000C5BD /* _FindFirst.cpp */,
 				102530B416A6775E0000C5BD /* _FindFirst.h */,
 				102530B516A6775E0000C5BD /* AutopatcherPatchContext.h */,
@@ -694,8 +701,6 @@
 				1025317E16A6775E0000C5BD /* SecureHandshake.h */,
 				1025317F16A6775E0000C5BD /* SendToThread.cpp */,
 				1025318016A6775E0000C5BD /* SendToThread.h */,
-				1025318116A6775E0000C5BD /* SHA1.cpp */,
-				1025318216A6775E0000C5BD /* SHA1.h */,
 				1025318316A6775E0000C5BD /* SignaledEvent.cpp */,
 				1025318416A6775E0000C5BD /* SignaledEvent.h */,
 				1025318516A6775E0000C5BD /* SimpleMutex.cpp */,
@@ -864,6 +869,7 @@
 				102531D916A6775E0000C5BD /* GridSectorizer.cpp in Sources */,
 				102531DA16A6775E0000C5BD /* HTTPConnection.cpp in Sources */,
 				102531DB16A6775E0000C5BD /* HTTPConnection2.cpp in Sources */,
+				4140AADC1D0C100E00E74963 /* DR_SHA1.cpp in Sources */,
 				102531DC16A6775E0000C5BD /* IncrementalReadInterface.cpp in Sources */,
 				102531DD16A6775E0000C5BD /* Itoa.cpp in Sources */,
 				102531DE16A6775E0000C5BD /* LinuxStrings.cpp in Sources */,
@@ -876,6 +882,7 @@
 				102531E516A6775E0000C5BD /* NatTypeDetectionCommon.cpp in Sources */,
 				102531E616A6775E0000C5BD /* NatTypeDetectionServer.cpp in Sources */,
 				102531E716A6775E0000C5BD /* NetworkIDManager.cpp in Sources */,
+				4140AADD1D0C100E00E74963 /* RandSync.cpp in Sources */,
 				102531E816A6775E0000C5BD /* NetworkIDObject.cpp in Sources */,
 				102531E916A6775E0000C5BD /* PacketConsoleLogger.cpp in Sources */,
 				102531EA16A6775E0000C5BD /* PacketFileLogger.cpp in Sources */,
@@ -914,7 +921,6 @@
 				1025320E16A6775E0000C5BD /* RPC4Plugin.cpp in Sources */,
 				1025320F16A6775E0000C5BD /* SecureHandshake.cpp in Sources */,
 				1025321016A6775E0000C5BD /* SendToThread.cpp in Sources */,
-				1025321116A6775E0000C5BD /* SHA1.cpp in Sources */,
 				1025321216A6775E0000C5BD /* SignaledEvent.cpp in Sources */,
 				1025321316A6775E0000C5BD /* SimpleMutex.cpp in Sources */,
 				1025321416A6775E0000C5BD /* SocketLayer.cpp in Sources */,
@@ -1062,6 +1068,7 @@
 				102530B116A675EE0000C5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

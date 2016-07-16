@@ -109,10 +109,10 @@ uint32_t SuperFastHashFile (const char * filename)
 uint32_t SuperFastHashFilePtr (FILE *fp)
 {
 	fseek(fp, 0, SEEK_END);
-	int length = ftell(fp);
+	long length = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
-	int bytesRemaining=length;
-	unsigned int lastHash = length;
+	long bytesRemaining=length;
+	unsigned int lastHash = (unsigned int)length;
 	char readBlock[INCREMENTAL_READ_BLOCK];
 	while (bytesRemaining>=(int) sizeof(readBlock))
 	{
@@ -123,7 +123,7 @@ uint32_t SuperFastHashFilePtr (FILE *fp)
 	if (bytesRemaining>0)
 	{
 		fread(readBlock, bytesRemaining, 1, fp);
-		lastHash=SuperFastHashIncremental (readBlock, bytesRemaining, lastHash );
+		lastHash=SuperFastHashIncremental (readBlock, (int)bytesRemaining, lastHash );
 	}
 	return lastHash;
 }

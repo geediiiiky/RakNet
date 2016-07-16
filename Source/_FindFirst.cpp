@@ -36,8 +36,8 @@ long _findfirst(const char *name, _finddata_t *f)
             // strip filter pattern from directory name, leave
             // trailing '/' intact.
             filter = lastSep+1;
-            unsigned sepIndex = lastSep - name;
-            nameCopy.Erase(sepIndex+1, nameCopy.GetLength() - sepIndex-1);
+            unsigned sepIndex = (unsigned)(lastSep - name);
+            nameCopy.Erase(sepIndex+1, (unsigned int)(nameCopy.GetLength() - sepIndex - 1));
 	}
 
 	DIR* dir = opendir(nameCopy);
@@ -93,7 +93,7 @@ int _findnext(long h, _finddata_t *f)
 	RakAssert(h >= 0 && h < (long)fileInfo.Size());
 	if (h < 0 || h >= (long)fileInfo.Size()) return -1;
         
-	_findinfo_t* fi = fileInfo[h];
+	_findinfo_t* fi = fileInfo[(int)h];
 
 	while(true)
 	{
@@ -150,9 +150,9 @@ int _findclose(long h)
         return -1;
     }
 
-    _findinfo_t* fi = fileInfo[h];
+    _findinfo_t* fi = fileInfo[(int)h];
     closedir(fi->openedDir);
-    fileInfo.RemoveAtIndex(h);
+    fileInfo.RemoveAtIndex((unsigned int)h);
     RakNet::OP_DELETE(fi, _FILE_AND_LINE_);
     return 0;   
 }

@@ -124,7 +124,7 @@ void FileList::AddFile(const char *filepath, const char *filename, FileListNodeC
 	if (fp==0)
 		return;
 	fseek(fp, 0, SEEK_END);
-	int length = ftell(fp);
+	long length = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
 
 	if (length > (int) ((unsigned int)-1 / 8))
@@ -151,7 +151,7 @@ void FileList::AddFile(const char *filepath, const char *filename, FileListNodeC
 	}
 
 	fread(data, 1, length, fp);
-	AddFile(filename, filepath, data, length, length, context);
+	AddFile(filename, filepath, data, (unsigned)length, (unsigned)length, context);
 	fclose(fp);
 
 #if USE_ALLOCA==1
